@@ -1,1 +1,73 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food-grade belt, cut from your photo</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      font: 18px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111;
+      background: #fff;
+    }
+    main {
+      max-width: 28rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    h1 { font-size: 1.4rem; font-weight: 650; margin: 0 0 0.75rem; }
+    p { margin: 0 0 1rem; }
+    form, .pay {
+      border: 1px solid #111;
+      padding: 1rem;
+      margin: 0 0 1rem;
+    }
+    label { display: block; font-size: 0.9rem; margin: 0 0 0.4rem; }
+    input[type="file"], input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      font: inherit;
+      margin: 0 0 0.8rem;
+    }
+    button, .pay a {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      font: inherit;
+      font-weight: 650;
+      color: #fff;
+      background: #111;
+      border: 0;
+      padding: 0.85rem 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .fine { font-size: 0.9rem; color: #333; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Food-grade belt, cut from your photo</h1>
+    <p>Send a photo of the belt. Pay £150 now. We cut PU, PVC or modular to that spec and ship. You fit it.</p>
+
+    <form action="https://formsubmit.co/darragh@silostudio.ie" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Belt photo">
+      <input type="hidden" name="_captcha" value="false">
+      <label for="photo">Photo of the belt</label>
+      <input id="photo" type="file" name="photo" accept="image/*" capture="environment" required>
+      <label for="note">Plant name or WhatsApp (optional)</label>
+      <input id="note" type="text" name="note" autocomplete="off">
+      <button type="submit">Send photo</button>
+    </form>
+
+    <p class="pay">
+      <a id="pay" href="STRIPE_PAYMENT_LINK">Pay £150 deposit</a>
+    </p>
+
+    <p class="fine">We price from the photo. Balance before ship. Full refund if we cannot cut and ship within 14 days.</p>
+  </main>
+</body>
+</html>
